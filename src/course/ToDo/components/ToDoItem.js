@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
@@ -16,6 +17,7 @@ function ToDoItem(props) {
         onChange={() => props.handleChange(props.item.id)}
       />
       <p style={props.item.completed? completedStyle: null}>{props.item.text}</p>
+      <button onClick={() => props.removeItem(props.item.id)}> Remove </button>
     </div>
   );
 }
